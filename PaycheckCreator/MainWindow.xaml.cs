@@ -24,5 +24,19 @@ namespace PaycheckCreator
         {
             InitializeComponent();
         }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            CreationForm creationForm = new CreationForm();
+            creationForm.Show();
+            //this.Hide();
+            //Console.WriteLine("Start button was clicked");
+        }
+
+        private void LoadButton_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Load button was clicked");
+            //TODO: Complete loading paycheck file
+        }
     }
 }
