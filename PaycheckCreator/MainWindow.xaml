@@ -8,11 +8,15 @@
         Title="Paycheck Creator" Height="450" Width="800">
 
     <Grid>
-        <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="247,35,0,0" TextWrapping="Wrap" Text="Welcome to the Paycheck Creator" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="274,85,0,0" TextWrapping="Wrap" Text="To create a new paycheck, please click on the button. You may also save an existing user and continue using it at a later date just by simply adding the date and hourly rate used. " VerticalAlignment="Top" Height="92" Width="269"/>
-        <Button x:Name="StartButton" Content="Create New Paycheck" HorizontalAlignment="Left" Margin="637,298,0,0" VerticalAlignment="Top" Width="130" Height="36" Click="StartButton_Click"/>
-        <Button x:Name="LoadButton" Content="Load Existing Paycheck" HorizontalAlignment="Left" Margin="637,362,0,0" VerticalAlignment="Top" Width="130" Height="36
-                " Click="LoadButton_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="35*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="247,35,0,0" TextWrapping="Wrap" Text="Welcome to the Paycheck Creator" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="274,85,0,0" TextWrapping="Wrap" Text="To create a new paycheck, please click on the button. You may also save an existing user and continue using it at a later date just by simply adding the date and hourly rate used. " VerticalAlignment="Top" Height="92" Width="269" Grid.ColumnSpan="2"/>
+        <Button x:Name="StartButton" Content="Create New Paycheck" HorizontalAlignment="Left" Margin="265.312,298,0,0" VerticalAlignment="Top" Width="130" Height="36" Click="StartButton_Click" Grid.Column="1"/>
+        <Button x:Name="LoadButton" Content="Load Existing Paycheck" HorizontalAlignment="Left" Margin="265.312,362,0,0" VerticalAlignment="Top" Width="130" Height="36
+                " Click="LoadButton_Click" Grid.Column="1"/>
     </Grid>
 
 </Window>

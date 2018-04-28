@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="CreationForm" Height="450" Width="800">
     <Grid>
-        
+        <TabControl HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="782">
+            <TabItem Header="Info">
+                <Grid Background="#FFFFFFFF">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="61*"/>
+                        <ColumnDefinition Width="144*"/>
+                        <ColumnDefinition Width="571*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="FirstNameText" HorizontalAlignment="Left" Height="23" Margin="25,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <TextBlock x:Name="FirstNameLabel" HorizontalAlignment="Left" Margin="10,14,0,0" TextWrapping="Wrap" Text="First Name:" VerticalAlignment="Top" Height="24" Width="76" Grid.ColumnSpan="2" Foreground="#FF304681"/>
+                    <TextBlock x:Name="MiddleNameLabel" HorizontalAlignment="Left" Margin="5,48,0,0" TextWrapping="Wrap" Text="Middle Name:" VerticalAlignment="Top" Height="24" Width="76" Grid.ColumnSpan="2" Foreground="#FF003BA2"/>
+                    <TextBox x:Name="MiddleNameText" HorizontalAlignment="Left" Height="23" Margin="25,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <TextBlock x:Name="LastNameLabel" HorizontalAlignment="Left" Margin="10,82,0,0" TextWrapping="Wrap" Text="Last Name:" VerticalAlignment="Top" Height="24" Width="76" Grid.ColumnSpan="2" Foreground="#FF4C52C1"/>
+                    <TextBox x:Name="LastNameText" HorizontalAlignment="Left" Height="23" Margin="25,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.ColumnSpan="2"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Description">
+                <Grid Background="#FFFFFFFF"/>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>
