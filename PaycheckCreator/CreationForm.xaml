@@ -23,7 +23,7 @@
                     <TextBox x:Name="LastNameText" HorizontalAlignment="Left" Height="23" Margin="25,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.ColumnSpan="2"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Description">
+            <TabItem Header="Calculations">
                 <Grid Background="#FFFFFFFF"/>
             </TabItem>
         </TabControl>
