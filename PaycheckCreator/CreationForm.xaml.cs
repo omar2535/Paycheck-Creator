@@ -19,24 +19,27 @@ namespace PaycheckCreator
     /// </summary>
     public partial class CreationForm : Window
     {
-        List<string> _items = new List<string>();
+        List<DeductionItem> items = new List<DeductionItem>();
         int i = 0;
         public CreationForm()
         {
             InitializeComponent();
-            _items.Add("One"); // <-- Add these
-            _items.Add("Two");
-            _items.Add("Three");
-            listbox.ItemsSource = _items;
 
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void addedNewDeduction(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("BUTTON CLICK");
-            _items.Add("Four");
-            listbox.ItemsSource = null;
-            listbox.ItemsSource = _items;
+            string text = NameOfDeduction.Text;
+            int percentageAmount = Int32.Parse(PercentageAmount.Text);
+            int flatAmount = Int32.Parse(FlatAmount.Text);
+            DeductionItem deductionItem = new DeductionItem();
+            deductionItem.NameOfDeduction = text;
+            deductionItem.PercentageAmount = percentageAmount;
+            deductionItem.FlatAmount = flatAmount;
+            DeductionDisplay.Items.Add(deductionItem);
+
         }
+
+
     }
 }
