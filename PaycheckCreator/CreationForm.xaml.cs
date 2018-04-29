@@ -19,10 +19,24 @@ namespace PaycheckCreator
     /// </summary>
     public partial class CreationForm : Window
     {
+        List<string> _items = new List<string>();
+        int i = 0;
         public CreationForm()
         {
             InitializeComponent();
+            _items.Add("One"); // <-- Add these
+            _items.Add("Two");
+            _items.Add("Three");
+            listbox.ItemsSource = _items;
+
         }
 
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("BUTTON CLICK");
+            _items.Add("Four");
+            listbox.ItemsSource = null;
+            listbox.ItemsSource = _items;
+        }
     }
 }
