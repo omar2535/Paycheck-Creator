@@ -16,8 +16,8 @@
                     <TextBox x:Name="MiddleNameText" HorizontalAlignment="Left" Height="23" Margin="109,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <TextBlock x:Name="LastNameLabel" HorizontalAlignment="Left" Margin="23,116,0,0" TextWrapping="Wrap" Text="Last Name:" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF4C52C1"/>
                     <TextBox x:Name="LastNameText" HorizontalAlignment="Left" Height="23" Margin="109,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <DatePicker HorizontalAlignment="Left" Margin="109,156,0,0" VerticalAlignment="Top"/>
-                    <TextBlock x:Name="LastNameLabel_Copy" HorizontalAlignment="Left" Margin="23,156,0,0" TextWrapping="Wrap" Text="Date:" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF4C52C1"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="109,199,0,0" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="LastNameLabel_Copy" HorizontalAlignment="Left" Margin="23,203,0,0" TextWrapping="Wrap" Text="Date:" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF4C52C1"/>
                     <TextBlock HorizontalAlignment="Left" Margin="23,10,0,0" TextWrapping="Wrap" Text="Personal Information" VerticalAlignment="Top" Height="29" Width="206" FontSize="20" FontWeight="Bold"/>
                     <TextBox x:Name="FirstNameText_Copy" HorizontalAlignment="Left" Height="23" Margin="514,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <TextBlock x:Name="FirstNameLabel_Copy" HorizontalAlignment="Left" Margin="405,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF304681"><Run Text="Country"/><Run Text=":"/></TextBlock>
@@ -33,14 +33,18 @@
                     <TextBox x:Name="LastNameText_Copy1" HorizontalAlignment="Left" Height="23" Margin="514,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <TextBlock x:Name="LastNameLabel_Copy3" HorizontalAlignment="Left" Margin="405,263,0,0" TextWrapping="Wrap" Text="Alternative Phone:" VerticalAlignment="Top" Height="24" Width="104" Foreground="#FF4C52C1"/>
                     <TextBox x:Name="LastNameText_Copy2" HorizontalAlignment="Left" Height="23" Margin="514,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock x:Name="LastNameLabel_Copy4" HorizontalAlignment="Left" Margin="23,154,0,0" TextWrapping="Wrap" Text="Education:" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF4C52C1"/>
+                    <TextBox x:Name="LastNameText_Copy3" HorizontalAlignment="Left" Height="23" Margin="109,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Calculations">
-                <Grid Background="#FFFFFFFF">
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="93,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="9,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Default Rate"/><Run Text=": "/></TextBlock>
-                    <TextBox HorizontalAlignment="Left" Height="24" Margin="93,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="9,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Hours Worked"/><Run Text=": "/></TextBlock>
+                <Grid Background="#FFFFFFFF" Height="391" VerticalAlignment="Top">
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="117,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="30,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="82"><Run Text="Default Rate"/><Run Text=": "/></TextBlock>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="117,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="30,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="82"><Run Text="Hours Worked"/><Run Text=": "/></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="30,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="249" Height="27" FontSize="20" FontWeight="Bold"><Run Text="Salary Descriptions"/><LineBreak/><Run/></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="470,10,0,0" TextWrapping="Wrap" Text="Deductions" VerticalAlignment="Top" Height="27" Width="260" FontSize="20" FontWeight="Bold"/>
                 </Grid>
             </TabItem>
         </TabControl>
