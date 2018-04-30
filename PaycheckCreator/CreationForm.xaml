@@ -51,7 +51,7 @@
                 <Grid Background="#FFFFFFFF" Height="391" VerticalAlignment="Top">
                     <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Deductions" VerticalAlignment="Top" Height="27" Width="260" FontSize="20" FontWeight="Bold"/>
                     <Button x:Name="AddNewDeduction" Content="Add" HorizontalAlignment="Left" Margin="701,48,0,0" VerticalAlignment="Top" Width="75" Click="addedNewDeduction"/>
-                    <TextBox x:Name="NameOfDeduction" HorizontalAlignment="Left" Height="23" Margin="130,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="NameOfDeduction" HorizontalAlignment="Left" Height="23" Margin="130,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="NameOfDeduction_TextChanged"/>
                     <TextBox x:Name="PercentageAmount" HorizontalAlignment="Left" Height="23" Margin="336,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" TextChanged="PercentageAmount_TextChanged" Background="#FFFFFFFE"/>
                     <TextBlock HorizontalAlignment="Left" Margin="260,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="71"><Run Text="% of Salary"/><Run Text=":"/></TextBlock>
                     <TextBlock HorizontalAlignment="Left" Margin="10,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="111"><Run Text="Name of Deduction"/><Run Text=":"/></TextBlock>
@@ -66,8 +66,9 @@
                         </DataGrid.Columns>
                         
                     </DataGrid>
-                    <TextBlock x:Name="WarningText" HorizontalAlignment="Left" Margin="336,25,0,0" TextWrapping="Wrap" Text="Please enter integers" VerticalAlignment="Top" Width="155" Foreground="Red"/>
-                    <TextBlock x:Name="WarningText1" HorizontalAlignment="Left" Margin="601,27,0,0" TextWrapping="Wrap" Text="Please enter integers" VerticalAlignment="Top" Width="155" Foreground="Red"/>
+                    <TextBlock x:Name="WarningText" HorizontalAlignment="Left" Margin="336,25,0,0" TextWrapping="Wrap" Text="Please enter decimals or numbers" VerticalAlignment="Top" Width="186" Foreground="Red" Opacity="0"/>
+                    <TextBlock x:Name="WarningText1" HorizontalAlignment="Left" Margin="601,27,0,0" TextWrapping="Wrap" Text="Please enter decimals or numbers" VerticalAlignment="Top" Width="185" Foreground="Red" Opacity="0" />
+                    <TextBlock x:Name="WarningText2" HorizontalAlignment="Left" Margin="130,26,0,0" TextWrapping="Wrap" Text="Please enter a name" VerticalAlignment="Top" Width="155" Foreground="Red"  Opacity="0"/>
 
                 </Grid>
             </TabItem>

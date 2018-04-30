@@ -28,6 +28,7 @@ namespace PaycheckCreator
             InitializeComponent();
             WarningText.Opacity = 0;
             WarningText1.Opacity = 0;
+            WarningText2.Opacity = 0;
 
         }
 
@@ -42,22 +43,14 @@ namespace PaycheckCreator
             deductionItem.PercentageAmount = percentageAmount;
             deductionItem.FlatAmount = flatAmount;
             //items.Add(deductionItem);
-            if (WarningText.Opacity == 100)
-            {
-                PercentageAmount.Background = Brushes.LightPink;
-            }
-            if (WarningText1.Opacity == 100)
-            {
-                FlatAmount.Background = Brushes.LightPink;
-            }
-            if (WarningText.Opacity == 0 && WarningText1.Opacity == 0) {
-                PercentageAmount.Background = Brushes.White;
-                FlatAmount.Background = Brushes.White;
+            if (finalLegalityCheck()) {
                 DeductionDisplay.Items.Add(deductionItem);
             }
+            
 
         }
 
+        //Actions when form changes
         private void PercentageAmount_TextChanged(object sender, TextChangedEventArgs e)
         {
             checkIfLegalAmount(WarningText, (TextBox)sender);
@@ -67,7 +60,15 @@ namespace PaycheckCreator
         {
             checkIfLegalAmount(WarningText1, (TextBox)sender);
         }
-
+        private void NameOfDeduction_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox text = (TextBox)sender;
+            if(text.Background != Brushes.White)
+                text.Background = Brushes.White;
+            if (WarningText2.Opacity == 100 && text.Text != "") {
+                WarningText2.Opacity = 0;
+            }
+        }
 
 
         //Helper for checking if amount is deduction amount is legal integers
@@ -100,6 +101,34 @@ namespace PaycheckCreator
                 return (T)System.Convert.ChangeType(0, Type.GetTypeCode(typeof(T)));
             }
         }
+
+        //Perform Legality check before submitting
+        private bool finalLegalityCheck() {
+            if (WarningText.Opacity == 100)
+            {
+                PercentageAmount.Background = Brushes.LightPink;
+            }
+            if (WarningText1.Opacity == 100)
+            {
+                FlatAmount.Background = Brushes.LightPink;
+            }
+            if (NameOfDeduction.Text == "") {
+                WarningText2.Opacity = 100;
+                NameOfDeduction.Background = Brushes.LightPink;
+            }
+            else
+            {
+                if (WarningText.Opacity == 0 && WarningText1.Opacity == 0)
+                {
+                    PercentageAmount.Background = Brushes.White;
+                    FlatAmount.Background = Brushes.White;
+                    NameOfDeduction.Background = Brushes.White;
+                    return true;
+                }
+            }
+            return false;
+        }
+
 
     }
 }
