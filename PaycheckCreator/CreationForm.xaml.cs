@@ -20,9 +20,9 @@ namespace PaycheckCreator
     /// </summary>
     public partial class CreationForm : Window
     {
-        int x = 0;
-        double number = 0.00;
-        List<DeductionItem> items = new List<DeductionItem>();
+        private int x = 0;
+        private double number = 0.00;
+        //List<DeductionItem> items = new List<DeductionItem>();
         public CreationForm()
         {
             InitializeComponent();
@@ -41,7 +41,21 @@ namespace PaycheckCreator
             deductionItem.NameOfDeduction = text;
             deductionItem.PercentageAmount = percentageAmount;
             deductionItem.FlatAmount = flatAmount;
-            DeductionDisplay.Items.Add(deductionItem);
+            //items.Add(deductionItem);
+            if (WarningText.Opacity == 100)
+            {
+                PercentageAmount.Background = Brushes.LightPink;
+            }
+            if (WarningText1.Opacity == 100)
+            {
+                FlatAmount.Background = Brushes.LightPink;
+            }
+            if (WarningText.Opacity == 0 && WarningText1.Opacity == 0) {
+                PercentageAmount.Background = Brushes.White;
+                FlatAmount.Background = Brushes.White;
+                DeductionDisplay.Items.Add(deductionItem);
+            }
+
         }
 
         private void PercentageAmount_TextChanged(object sender, TextChangedEventArgs e)
@@ -61,9 +75,11 @@ namespace PaycheckCreator
             if (Int32.TryParse(form.Text, out x) || form.Text == "")
             {
                 block.Opacity = 0;
+                form.Background = Brushes.White;
             }
             else if (Double.TryParse(form.Text, out number)) {
                 block.Opacity = 0;
+                form.Background = Brushes.White;
             }
             else {
                 block.Opacity = 100;
@@ -84,5 +100,6 @@ namespace PaycheckCreator
                 return (T)System.Convert.ChangeType(0, Type.GetTypeCode(typeof(T)));
             }
         }
+
     }
 }
