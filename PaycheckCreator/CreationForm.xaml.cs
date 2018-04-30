@@ -33,8 +33,23 @@ namespace PaycheckCreator
         private void addedNewDeduction(object sender, RoutedEventArgs e)
         {
             string text = NameOfDeduction.Text;
-            int percentageAmount = Int32.Parse(PercentageAmount.Text);
-            int flatAmount = Int32.Parse(FlatAmount.Text);
+            int percentageAmount;
+            int flatAmount;
+            if (Int32.TryParse(PercentageAmount.Text, out x))
+            {
+                percentageAmount = x;
+            }
+            else {
+                percentageAmount = 0;
+            }
+            if (Int32.TryParse(FlatAmount.Text, out x))
+            {
+                flatAmount = x;
+            }
+            else {
+                flatAmount = 0;
+            }
+            
             DeductionItem deductionItem = new DeductionItem();
             deductionItem.NameOfDeduction = text;
             deductionItem.PercentageAmount = percentageAmount;
@@ -44,19 +59,19 @@ namespace PaycheckCreator
 
         private void PercentageAmount_TextChanged(object sender, TextChangedEventArgs e)
         {
-            checkIfLegalAmount(WarningText);
+            checkIfLegalAmount(WarningText, (TextBox)sender);
         }
 
         private void FlatAmount_TextChanged(object sender, TextChangedEventArgs e)
         {
-            checkIfLegalAmount(WarningText1);
+            checkIfLegalAmount(WarningText1, (TextBox)sender);
         }
 
 
 
         //Helper for checking if amount is deduction amount is legal integers
-        private void checkIfLegalAmount(TextBlock block) {
-            if (Int32.TryParse(PercentageAmount.Text, out x) || PercentageAmount.Text == "")
+        private void checkIfLegalAmount(TextBlock block, TextBox form) {
+            if (Int32.TryParse(form.Text, out x) || form.Text == "")
             {
                 block.Opacity = 0;
             }
