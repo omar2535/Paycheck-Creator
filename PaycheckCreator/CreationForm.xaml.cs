@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace PaycheckCreator
 {
     /// <summary>
@@ -19,11 +20,13 @@ namespace PaycheckCreator
     /// </summary>
     public partial class CreationForm : Window
     {
+        int x = 0;
         List<DeductionItem> items = new List<DeductionItem>();
-        int i = 0;
         public CreationForm()
         {
             InitializeComponent();
+            WarningText.Opacity = 0;
+            WarningText1.Opacity = 0;
 
         }
 
@@ -37,9 +40,30 @@ namespace PaycheckCreator
             deductionItem.PercentageAmount = percentageAmount;
             deductionItem.FlatAmount = flatAmount;
             DeductionDisplay.Items.Add(deductionItem);
+        }
 
+        private void PercentageAmount_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            checkIfLegalAmount(WarningText);
+        }
+
+        private void FlatAmount_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            checkIfLegalAmount(WarningText1);
         }
 
 
+
+        //Helper for checking if amount is deduction amount is legal integers
+        private void checkIfLegalAmount(TextBlock block) {
+            if (Int32.TryParse(PercentageAmount.Text, out x) || PercentageAmount.Text == "")
+            {
+                block.Opacity = 0;
+            }
+            else
+            {
+                block.Opacity = 100;
+            }
+        }
     }
 }

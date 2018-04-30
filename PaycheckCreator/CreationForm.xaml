@@ -52,11 +52,11 @@
                     <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Deductions" VerticalAlignment="Top" Height="27" Width="260" FontSize="20" FontWeight="Bold"/>
                     <Button x:Name="AddNewDeduction" Content="Add" HorizontalAlignment="Left" Margin="701,48,0,0" VerticalAlignment="Top" Width="75" Click="addedNewDeduction"/>
                     <TextBox x:Name="NameOfDeduction" HorizontalAlignment="Left" Height="23" Margin="130,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox x:Name="PercentageAmount" HorizontalAlignment="Left" Height="23" Margin="336,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
+                    <TextBox x:Name="PercentageAmount" HorizontalAlignment="Left" Height="23" Margin="336,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" TextChanged="PercentageAmount_TextChanged"/>
                     <TextBlock HorizontalAlignment="Left" Margin="260,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="71"><Run Text="% of Salary"/><Run Text=":"/></TextBlock>
                     <TextBlock HorizontalAlignment="Left" Margin="10,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="111"><Run Text="Name of Deduction"/><Run Text=":"/></TextBlock>
                     <TextBlock HorizontalAlignment="Left" Margin="506,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="90"><Run Text="Flat Amount ($"/><Run Text=")"/><Run Text=":"/></TextBlock>
-                    <TextBox x:Name="FlatAmount" HorizontalAlignment="Left" Height="23" Margin="601,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95"/>
+                    <TextBox x:Name="FlatAmount" HorizontalAlignment="Left" Height="23" Margin="601,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" TextChanged="FlatAmount_TextChanged"/>
                     <DataGrid x:Name="DeductionDisplay" HorizontalAlignment="Left" Height="306" Margin="10,75,0,0" VerticalAlignment="Top" Width="766">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Name Of Deduction" Binding="{Binding Path=NameOfDeduction}" Width="255"/>
@@ -66,7 +66,9 @@
                         </DataGrid.Columns>
                         
                     </DataGrid>
-                    
+                    <TextBlock x:Name="WarningText" HorizontalAlignment="Left" Margin="336,25,0,0" TextWrapping="Wrap" Text="Please enter integers" VerticalAlignment="Top" Width="155" Foreground="Red"/>
+                    <TextBlock x:Name="WarningText1" HorizontalAlignment="Left" Margin="601,27,0,0" TextWrapping="Wrap" Text="Please enter integers" VerticalAlignment="Top" Width="155" Foreground="Red"/>
+
                 </Grid>
             </TabItem>
         </TabControl>
