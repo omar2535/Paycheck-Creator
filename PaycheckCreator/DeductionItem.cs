@@ -9,8 +9,8 @@ namespace PaycheckCreator
     class DeductionItem
     {
         public string NameOfDeduction { get; set; }
-        public int PercentageAmount { get; set; }
-        public int FlatAmount { get; set; }
+        public double PercentageAmount { get; set; }
+        public double FlatAmount { get; set; }
         
     }
 }
