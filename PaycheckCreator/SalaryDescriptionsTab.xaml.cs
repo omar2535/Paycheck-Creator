@@ -10,23 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 
 namespace PaycheckCreator
 {
     /// <summary>
-    /// Interaction logic for CreationForm.xaml
+    /// Interaction logic for SalaryDescriptionsTab.xaml
     /// </summary>
-    public partial class CreationForm : Window
+    public partial class SalaryDescriptionsTab : UserControl
     {
-
-        //List<DeductionItem> items = new List<DeductionItem>();
-        public CreationForm()
+        public SalaryDescriptionsTab()
         {
             InitializeComponent();
+        }
 
-
+        private void NextButton_Click(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)System.Windows.Application.Current.MainWindow).creationForm.TabController.SelectedIndex = 2;
         }
     }
 }

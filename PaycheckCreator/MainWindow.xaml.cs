@@ -20,6 +20,7 @@ namespace PaycheckCreator
     /// </summary>
     public partial class MainWindow : Window
     {
+        public CreationForm creationForm;
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace PaycheckCreator
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            CreationForm creationForm = new CreationForm();
+            this.creationForm = new CreationForm();
             creationForm.Show();
             //this.Hide();
             //Console.WriteLine("Start button was clicked");
@@ -37,6 +38,10 @@ namespace PaycheckCreator
         {
             Console.WriteLine("Load button was clicked");
             //TODO: Complete loading paycheck file
+        }
+
+        public CreationForm getCreationForm() {
+            return this.creationForm;
         }
     }
 }

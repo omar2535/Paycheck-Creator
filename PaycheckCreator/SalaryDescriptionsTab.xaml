@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="PaycheckCreator.SalaryDescriptionsTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PaycheckCreator"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid Background="#FFFFFFFF" Margin="0,0,23,0" Height="389" VerticalAlignment="Bottom" Width="800">
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="117,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="82"><Run Text="Default Rate"/><Run Text=": "/></TextBlock>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="117,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="82"><Run Text="Hours Worked"/><Run Text=": "/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="249" Height="27" FontSize="20" FontWeight="Bold"><Run Text="Salary Descriptions"/><LineBreak/><Run/></TextBlock>
+            <Button x:Name="NextButtonFromSalaryDescription" Content="Next" HorizontalAlignment="Left" Margin="682,359,0,0" VerticalAlignment="Top" Width="74" Background="#FF00FF80" Click="NextButton_Click"/>
+
+        </Grid>
+
+    </Grid>
+</UserControl>

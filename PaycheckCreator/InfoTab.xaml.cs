@@ -10,23 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 
 namespace PaycheckCreator
 {
     /// <summary>
-    /// Interaction logic for CreationForm.xaml
+    /// Interaction logic for InfoPage.xaml
     /// </summary>
-    public partial class CreationForm : Window
+    public partial class InfoPage : UserControl
     {
-
-        //List<DeductionItem> items = new List<DeductionItem>();
-        public CreationForm()
+        public InfoPage()
         {
             InitializeComponent();
+        }
 
+        private void NextButtonFromInfo_Click(object sender, RoutedEventArgs e)
+        {
 
+            ((MainWindow)System.Windows.Application.Current.MainWindow).creationForm.TabController.SelectedIndex = 1;
+            
         }
     }
 }
