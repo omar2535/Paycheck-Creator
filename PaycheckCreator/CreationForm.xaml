@@ -26,6 +26,9 @@
                 <local:DeductionsTab Width="788" Height="auto" Margin="0,0,-2,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Viewbox>
             </TabItem>
+            <TabItem x:Name="ReportTab" Header="Report" Visibility="Hidden">
+            
+            </TabItem>
 
         </TabControl>
 

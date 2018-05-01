@@ -71,7 +71,8 @@ namespace PaycheckCreator
         //When Next button is clicked
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-
+            ((MainWindow)System.Windows.Application.Current.MainWindow).creationForm.ReportTab.Visibility = Visibility.Visible;
+            ((MainWindow)System.Windows.Application.Current.MainWindow).creationForm.TabController.SelectedIndex += 1;
         }
 
 

@@ -28,7 +28,7 @@
             <TextBlock x:Name="WarningText" HorizontalAlignment="Left" Margin="336,25,0,0" TextWrapping="Wrap" Text="Please enter decimals or numbers" VerticalAlignment="Top" Width="186" Foreground="Red" Opacity="0"/>
             <TextBlock x:Name="WarningText1" HorizontalAlignment="Left" Margin="601,27,0,0" TextWrapping="Wrap" Text="Please enter decimals or numbers" VerticalAlignment="Top" Width="185" Foreground="Red" Opacity="0" />
             <TextBlock x:Name="WarningText2" HorizontalAlignment="Left" Margin="130,26,0,0" TextWrapping="Wrap" Text="Please enter a name" VerticalAlignment="Top" Width="155" Foreground="Red"  Opacity="0"/>
-            <Button x:Name="NextButtonFromSalaryDescription" Content="Next" HorizontalAlignment="Left" Margin="702,359,0,0" VerticalAlignment="Top" Width="74" Background="#FF00FF80" Click="NextButton_Click"/>
+            <Button x:Name="NextButtonFromSalaryDescription" Content="Complete" HorizontalAlignment="Left" Margin="702,359,0,0" VerticalAlignment="Top" Width="74" Background="#FF00FF80" Click="NextButton_Click"/>
         </Grid>
         
     </Grid>

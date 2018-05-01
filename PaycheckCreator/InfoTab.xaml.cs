@@ -28,7 +28,7 @@ namespace PaycheckCreator
         private void NextButtonFromInfo_Click(object sender, RoutedEventArgs e)
         {
 
-            ((MainWindow)System.Windows.Application.Current.MainWindow).creationForm.TabController.SelectedIndex = 1;
+            ((MainWindow)System.Windows.Application.Current.MainWindow).creationForm.TabController.SelectedIndex +=1;
             
         }
     }
