@@ -25,8 +25,6 @@ namespace PaycheckCreator
         public CreationForm()
         {
             InitializeComponent();
-
-
         }
     }
 }

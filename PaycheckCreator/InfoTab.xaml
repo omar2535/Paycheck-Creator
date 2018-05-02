@@ -8,31 +8,31 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid Background="#FFFFFFFF" Margin="0,0,23,0" Height="389" VerticalAlignment="Bottom" Width="800">
-            <TextBox x:Name="FirstNameText" HorizontalAlignment="Left" Height="23" Margin="109,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="FirstNameForm" HorizontalAlignment="Left" Height="23" Margin="109,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <TextBlock x:Name="FirstNameLabel" HorizontalAlignment="Left" Margin="23,44,0,0" TextWrapping="Wrap" Text="First Name:" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF304681"/>
             <TextBlock x:Name="MiddleNameLabel" HorizontalAlignment="Left" Margin="23,82,0,0" TextWrapping="Wrap" Text="Middle Name:" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF003BA2"/>
-            <TextBox x:Name="MiddleNameText" HorizontalAlignment="Left" Height="23" Margin="109,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="MiddleNameForm" HorizontalAlignment="Left" Height="23" Margin="109,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <TextBlock x:Name="LastNameLabel" HorizontalAlignment="Left" Margin="23,116,0,0" TextWrapping="Wrap" Text="Last Name:" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF4C52C1"/>
-            <TextBox x:Name="LastNameText" HorizontalAlignment="Left" Height="23" Margin="109,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <DatePicker HorizontalAlignment="Left" Margin="109,199,0,0" VerticalAlignment="Top"/>
-            <TextBlock x:Name="LastNameLabel_Copy" HorizontalAlignment="Left" Margin="23,203,0,0" TextWrapping="Wrap" Text="Date:" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF4C52C1"/>
+            <TextBox x:Name="LastNameForm" HorizontalAlignment="Left" Height="23" Margin="109,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <DatePicker x:Name="DateForm" HorizontalAlignment="Left" Margin="109,199,0,0" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="23,203,0,0" TextWrapping="Wrap" Text="Date:" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF4C52C1"/>
             <TextBlock HorizontalAlignment="Left" Margin="23,10,0,0" TextWrapping="Wrap" Text="Personal Information" VerticalAlignment="Top" Height="29" Width="206" FontSize="20" FontWeight="Bold"/>
-            <TextBox x:Name="FirstNameText_Copy" HorizontalAlignment="Left" Height="23" Margin="514,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBlock x:Name="FirstNameLabel_Copy" HorizontalAlignment="Left" Margin="405,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF304681"><Run Text="Country"/><Run Text=":"/></TextBlock>
-            <TextBlock x:Name="MiddleNameLabel_Copy" HorizontalAlignment="Left" Margin="405,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="81" Foreground="#FF003BA2"><Run Text="Street Address"/><Run Text=":"/></TextBlock>
-            <TextBox x:Name="MiddleNameText_Copy" HorizontalAlignment="Left" Height="23" Margin="514,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBlock x:Name="LastNameLabel_Copy1" HorizontalAlignment="Left" Margin="405,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF4C52C1"><Run Text="City/Town"/><Run Text=":"/></TextBlock>
-            <TextBox x:Name="LastNameText_Copy" HorizontalAlignment="Left" Height="23" Margin="514,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="FirstNameText_Copy1" HorizontalAlignment="Left" Height="23" Margin="514,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBlock x:Name="FirstNameLabel_Copy1" HorizontalAlignment="Left" Margin="405,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF304681"><Run Text="State/Region"/><Run Text=":"/></TextBlock>
-            <TextBlock x:Name="MiddleNameLabel_Copy1" HorizontalAlignment="Left" Margin="405,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="91" Foreground="#FF003BA2"><Run Text="ZIP/Postal Code"/><Run Text=":"/></TextBlock>
-            <TextBox x:Name="MiddleNameText_Copy1" HorizontalAlignment="Left" Height="23" Margin="514,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBlock x:Name="LastNameLabel_Copy2" HorizontalAlignment="Left" Margin="405,226,0,0" TextWrapping="Wrap" Text="Primary Phone:" VerticalAlignment="Top" Height="24" Width="91" Foreground="#FF4C52C1"/>
-            <TextBox x:Name="LastNameText_Copy1" HorizontalAlignment="Left" Height="23" Margin="514,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBlock x:Name="LastNameLabel_Copy3" HorizontalAlignment="Left" Margin="405,263,0,0" TextWrapping="Wrap" Text="Alternative Phone:" VerticalAlignment="Top" Height="24" Width="104" Foreground="#FF4C52C1"/>
-            <TextBox x:Name="LastNameText_Copy2" HorizontalAlignment="Left" Height="23" Margin="514,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBlock x:Name="LastNameLabel_Copy4" HorizontalAlignment="Left" Margin="23,154,0,0" TextWrapping="Wrap" Text="Education:" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF4C52C1"/>
-            <TextBox x:Name="LastNameText_Copy3" HorizontalAlignment="Left" Height="23" Margin="109,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="CountryForm" HorizontalAlignment="Left" Height="23" Margin="514,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBlock HorizontalAlignment="Left" Margin="405,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF304681"><Run Text="Country"/><Run Text=":"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="405,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="81" Foreground="#FF003BA2"><Run Text="Street Address"/><Run Text=":"/></TextBlock>
+            <TextBox x:Name="AddressForm" HorizontalAlignment="Left" Height="23" Margin="514,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBlock HorizontalAlignment="Left" Margin="405,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF4C52C1"><Run Text="City/Town"/><Run Text=":"/></TextBlock>
+            <TextBox x:Name="CityForm" HorizontalAlignment="Left" Height="23" Margin="514,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="StateForm" HorizontalAlignment="Left" Height="23" Margin="514,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBlock HorizontalAlignment="Left" Margin="405,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF304681"><Run Text="State/Region"/><Run Text=":"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="405,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="91" Foreground="#FF003BA2"><Run Text="ZIP/Postal Code"/><Run Text=":"/></TextBlock>
+            <TextBox x:Name="PostalForm" HorizontalAlignment="Left" Height="23" Margin="514,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBlock HorizontalAlignment="Left" Margin="405,226,0,0" TextWrapping="Wrap" Text="Primary Phone:" VerticalAlignment="Top" Height="24" Width="91" Foreground="#FF4C52C1"/>
+            <TextBox x:Name="PrimaryPhoneForm" HorizontalAlignment="Left" Height="23" Margin="514,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBlock HorizontalAlignment="Left" Margin="405,263,0,0" TextWrapping="Wrap" Text="Alternative Phone:" VerticalAlignment="Top" Height="24" Width="104" Foreground="#FF4C52C1"/>
+            <TextBox x:Name="AltPhoneForm" HorizontalAlignment="Left" Height="23" Margin="514,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBlock HorizontalAlignment="Left" Margin="23,154,0,0" TextWrapping="Wrap" Text="Education:" VerticalAlignment="Top" Height="24" Width="76" Foreground="#FF4C52C1"/>
+            <TextBox x:Name="EducationForm" HorizontalAlignment="Left" Height="23" Margin="109,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <Button x:Name="NextButtonFromInfo" Content="Next" HorizontalAlignment="Left" Margin="682,359,0,0" VerticalAlignment="Top" Width="74" Background="#FF00FF80" Click="NextButtonFromInfo_Click"/>
         </Grid>
     </Grid>

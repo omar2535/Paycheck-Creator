@@ -44,8 +44,6 @@ namespace PaycheckCreator
             {
                 DeductionDisplay.Items.Add(deductionItem);
             }
-
-
         }
 
         //Actions when form changes
@@ -71,10 +69,12 @@ namespace PaycheckCreator
         //When Next button is clicked
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindow)System.Windows.Application.Current.MainWindow).creationForm.ReportTab.Visibility = Visibility.Visible;
+            ((MainWindow)System.Windows.Application.Current.MainWindow).creationForm.ResultsTab.Visibility = Visibility.Visible;
+            //((MainWindow)System.Windows.Application.Current.MainWindow).creationForm.
             ((MainWindow)System.Windows.Application.Current.MainWindow).creationForm.TabController.SelectedIndex += 1;
-        }
+            
 
+        } 
 
         //Helper for checking if amount is deduction amount is legal integers
         private void checkIfLegalAmount(TextBlock block, TextBox form)

@@ -24,5 +24,9 @@ namespace PaycheckCreator
         {
             InitializeComponent();
         }
+
+        public void updateAllValues() {
+
+        }
     }
 }

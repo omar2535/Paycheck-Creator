@@ -30,6 +30,7 @@ namespace PaycheckCreator
         {
             this.creationForm = new CreationForm();
             creationForm.Show();
+            
             //this.Hide();
             //Console.WriteLine("Start button was clicked");
         }

@@ -59,6 +59,9 @@
     <Compile Include="DeductionsTab.xaml.cs">
       <DependentUpon>DeductionsTab.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ResultsTab.xaml.cs">
+      <DependentUpon>ResultsTab.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SalaryDescriptionsTab.xaml.cs">
       <DependentUpon>SalaryDescriptionsTab.xaml</DependentUpon>
     </Compile>
@@ -93,6 +96,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ResultsTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SalaryDescriptionsTab.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
