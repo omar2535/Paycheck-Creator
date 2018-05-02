@@ -69,10 +69,12 @@ namespace PaycheckCreator
         //When Next button is clicked
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindow)System.Windows.Application.Current.MainWindow).creationForm.ResultsTab.Visibility = Visibility.Visible;
-            //((MainWindow)System.Windows.Application.Current.MainWindow).creationForm.
-            ((MainWindow)System.Windows.Application.Current.MainWindow).creationForm.TabController.SelectedIndex += 1;
-            
+
+            CreationForm currentForm = ((MainWindow)System.Windows.Application.Current.MainWindow).creationForm;
+            ResultsTab currentResultsTabControl = currentForm.ResultsTabControl;
+            currentForm.TabController.SelectedIndex += 1;
+            currentForm.ResultsTabLabel.Visibility = Visibility.Visible;
+            currentResultsTabControl.Field1.Text = currentForm.InfoPageControl.FirstNameForm.Text;
 
         } 
 
